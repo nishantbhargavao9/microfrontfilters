@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import { Row, Col, Form } from "react-bootstrap";
-import { useStore } from "second/ZustandStore";
+import { useStore } from "host/ZustandStore";
 
 const MIN = 0;
 const MAX = 3000;

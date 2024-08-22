@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Form, Button, Col, Row, Card, Container } from "react-bootstrap";
-import { useStore } from "second/ZustandStore";
+import { useStore } from "host/ZustandStore";
 import PriceRangeSlider from "./PriceRangeSlider";
 
 const ProductFilters = () => {
