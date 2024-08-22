@@ -64,8 +64,14 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "filters",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      remotes: {
+        host: "host@http://localhost:3000/remoteEntry.js",
+        "second": "second@http://localhost:3003/remoteEntry.js",
+        filters: "filters@http://localhost:3001/remoteEntry.js",
+      },
+      exposes: {
+        "./ProductFilters": "./src/Filters/ProductFilters.tsx",
+      },
       shared: {
         ...deps,
         react: {
